@@ -1,17 +1,33 @@
-<footer class="container p-6 mx-auto flex justify-between items-center">
-  <span class="text-sm font-light">
-    {{ if (isset .Site.Params "copyright") }}
-    {{ .Site.Params.copyright | safeHTML }}
-    {{ else }}
-    {{ dateFormat "2006" now }} © {{ .Site.Title }}
-    {{ end }}
-  </span>
-  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
-      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 15l-6 -6l-6 6h12" />
-    </svg>
+<footer class="bg-gray-800 p-4 shadow md:px-6 md:py-8">
+  <div class="sm:flex sm:items-center sm:justify-between">
+    <span class="mb-4 flex cursor-default select-none items-center sm:mb-0">
+      <span class="text-2xl font-bold tracking-tight text-white">PacketEngine</span>
+    </span>
+    <ul class="mb-6 flex flex-wrap items-center text-sm text-gray-400 sm:mb-0">
+      <li>
+        <span class="mr-4 divide-x md:mr-6">© {{ dateFormat "2006" now }} Otlichno Ltd</span>
+      </li>
+      <li>
+        <a class="mr-4 hover:underline md:mr-6" href="https://blog.packetengine.co.uk/" target="_blank">Blog</a>
+      </li>
+      <li>
+        <a class="mr-4 hover:underline md:mr-6" href="https://apidocs.packetengine.co.uk/" target="_blank">API Docs</a>
+      </li>
+      <li>
+        <a class="mr-4 hover:underline md:mr-6" href="https://packetengine.co.uk/terms-of-service">Terms</a>
+      </li>
+      <li>
+        <a class="mr-4 hover:underline md:mr-6" href="https://packetengine.co.uk/privacy-policy">Privacy</a>
+      </li>
+      <li>
+        <a class="hover:underline" href="https://packetengine.co.uk/contact">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  <hr class="my-6 border-gray-700 sm:mx-auto lg:my-8">
+  <span class="block text-sm text-gray-400 sm:text-center">Otlichno Ltd is a company registered in England and
+    Wales (Company No. 14621913).<br>Registered Office: Piccadilly Business Centre, Aldow Enterprise Park,
+    Manchester, M12 6AE, United Kingdom.
   </span>
 </footer>
 
@@ -75,7 +91,7 @@
     mobileMenu.classList.toggle('hidden');
     mobileMenu.classList.toggle('flex');
   }
-  if(mobileMenu && mobileMenuButton){
+  if (mobileMenu && mobileMenuButton) {
     mobileMenuButton.addEventListener('click', toggleMenu)
   }
 </script>
